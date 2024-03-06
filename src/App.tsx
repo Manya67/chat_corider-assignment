@@ -70,11 +70,13 @@ const App = () => {
 };
 
 export default App;
-
+// date
 // group avatar --
-// scrooler at bottom
 // scroll message top
-// working buttons --
-// reply to ? ---
+// reply to ? (dont think works)
 // two network calls
-// kyc img
+// attachment
+
+// kyc img (not found)
+// scrooler at bottom (done)
+// three dots
