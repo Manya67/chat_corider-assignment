@@ -20,7 +20,7 @@ const GroupDetails = ({ fromDetails, toDetails }: groupInterface) => {
   return (
     <div className="min-h-[86px] flex justify-between items-center px-3">
       <div className="w-auto h-full flex flex-row items-center justify-between gap-3">
-        <Avatar sx={{ width: 56, height: 56 }}>H</Avatar>
+        <Avatar sx={{ width: 56, height: 56 }}>G</Avatar>
         <div className="flex flex-col">
           <h6 className="text-slate-600 text-md">
             From <span className="text-black text-lg">{fromDetails}</span>

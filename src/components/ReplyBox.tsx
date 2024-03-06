@@ -32,11 +32,16 @@ const ReplyBox = () => {
           ref={catMenu}
         >
           {openMenu && (
-            <div className="w-32 text-white text-2xl bottom-0 right-0 overflow-hidden absolute mb-12 flex flex-row justify-evenly items-center py-1 rounded-2xl bg-green-900  ">
-              <MdOutlineCameraAlt />
-              <LuVideo />
-              <PiFileArrowDown />
-            </div>
+            <>
+              <div className="w-32 text-white text-2xl bottom-0 right-1 overflow-hidden absolute mb-12 flex flex-row justify-evenly items-center py-1 rounded-2xl bg-green-900">
+                <MdOutlineCameraAlt />
+                <LuVideo />
+                <PiFileArrowDown />
+              </div>
+              <div className="bottom-[1.33rem] right-12 absolute text-green-900 text-3xl mb-2">
+                <IoMdArrowDropdown />
+              </div>
+            </>
           )}
           <GrAttachment />
         </div>

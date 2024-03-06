@@ -4,7 +4,7 @@ import { chatDetailInterface } from "../constants/ChatInterface";
 
 const ChatBoxOthers = ({ chat }: chatDetailInterface) => {
   return (
-    <div className="h-auto flex flex-row items-start justify-start pt-2 gap-2">
+    <div className="h-auto flex flex-row items-start justify-start py-3 gap-2">
       {chat.sender.is_kyc_verified ? (
         <Badge
           overlap="circular"
