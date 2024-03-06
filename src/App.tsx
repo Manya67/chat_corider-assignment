@@ -25,8 +25,8 @@ const App = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full bg-red-100 flex justify-center items-center">
-      <div className="h-screen sm:w-[450px] w-full bg-[#FAF9F4] absolute">
+    <div className="h-svh w-full bg-red-100 flex justify-center items-center">
+      <div className="h-svh sm:w-[450px] w-full bg-[#FAF9F4] absolute">
         <Header groupName={data.name} />
         <GroupDetails fromDetails={data.from} toDetails={data.to} />
         {/* avatar */}
