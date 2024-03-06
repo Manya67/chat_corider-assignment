@@ -4,31 +4,33 @@ import ChatBoxOthers from "./ChatBoxOthers";
 import ChatBoxSelf from "./ChatBoxSelf";
 import ReplyBox from "./ReplyBox";
 import { Divider } from "@mui/material";
+import { convertDate } from "../constants/functions";
 
 const ChatScreen = ({ chats }: chatScreenInterface) => {
   let date: string = "2024-01-01";
+  let dateShow: string = "01 Jan, 2024";
   const messagesEndRef = useRef<HTMLInputElement>(null);
-
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-
   useEffect(() => {
     scrollToBottom();
   }, [chats]);
+
   return (
     <div className="px-3 py-2 h-[calc(100%-150px)] flex flex-col justify-end items-center w-full gap-1">
-      <div className="overflow-y-auto  ">
+      <div className="overflow-y-auto">
         {chats.map((chat: chatInterface) => {
           const chatDate: string = chat?.time?.substr(0, 10) || "";
           let flag: Boolean = false;
           if (chatDate !== date) {
             flag = true;
             date = chatDate;
+            dateShow = convertDate(date);
           }
           return (
             <div key={chat.id}>
-              {flag && <Divider>{date}</Divider>}
+              {flag && <Divider>{dateShow}</Divider>}
               {chat.sender.self ? (
                 <ChatBoxSelf chat={chat} key={chat.id} />
               ) : (
